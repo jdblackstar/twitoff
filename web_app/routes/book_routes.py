@@ -26,7 +26,7 @@ def list_books_for_humans():
 def new_book():
     return render_template("new_book.html")
 
-@book_routes.route("/books/create", methods=["POST"])
+@book_routes.route("/books/create", methods=["POST"]) # method=["GET"] is default
 def create_book():
     print("FORM DATA:", dict(request.form))
     # todo: store in database
