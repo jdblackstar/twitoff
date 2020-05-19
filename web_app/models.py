@@ -12,6 +12,11 @@ class Book(db.Model):
     title = db.Column(db.String(128))
     author_id = db.Column(db.String(128))
 
+class Tweet(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    content = db.Column(db.String(280))
+    user = db.Column(db.String(15))
+
 def parse_records(database_records):
     """
     A helper method for converting a list of database record objects into a list of dictionaries, so they can be returned as JSON
